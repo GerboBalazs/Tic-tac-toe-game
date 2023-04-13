@@ -23,7 +23,7 @@
         }
     </style>
 </head>
-<body>
+<body onload="loadGames()">
     <section class="mysection">
         <div class="text-center">
         <h1>Tic-Tac-Toe Game</h1>
@@ -55,15 +55,33 @@
                             <div class="text-center">
                                 <button class="btn btn-info" onclick="clearTable()">Reset </button>
                                 <button class="btn btn-success" onclick="save()">Save </button>
-                                <button class="btn btn-warning" onclick="load()">Load </button>
+                            </div>
+                            <div class="text-center mt-1">
+                                <input type="text" name="gameName" id="gameName" placeholder="Enter game name here">
                             </div>
                         </div>
                     </div>
                 </div>
         </div>
     </section>
-
-
-    
+    <section class="mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 mx-auto">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="text-center">
+                                <h4>Saved games</h4>
+                                <select name="gameSelect" id="gameSelect"></select>
+                            </div>
+                            <div class="text-center mt-2">
+                                <button class="btn btn-warning" onclick="load()">Load </button>
+                                <button class="btn btn-danger" onclick="deleteGame()">Delete </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
 </body>
 </html>
